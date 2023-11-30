@@ -28,7 +28,9 @@ app.get("/api/order/:orderid", (req, res) => {
 app.get("/api/orders", (req, res) => {
   res.json(sortedOrders)
 })
-
+app.get("/", (req, res) => {
+  res.send("Welcome to Star Bakery!")
+})
 app.post("/api/order", (req, res) => {
   const order = req.body
   order.id = orders.length + 1
